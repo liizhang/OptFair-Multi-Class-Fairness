@@ -1184,7 +1184,9 @@ def acsincome_process(n_classes=2, sensitive_attr='sex', remove_sensitive_attr=T
         },
     }
 
-    pkl_path = 'data/acsincome/acsincome5.pkl'
+    cache_dir = 'data/acs'
+    os.makedirs(cache_dir, exist_ok=True)
+    pkl_path = os.path.join(cache_dir, 'acsincome5.pkl')
     if os.path.exists(pkl_path):
         print(f"Found existing file: {pkl_path}. Loading from disk...")
         with open(pkl_path, "rb") as f:
@@ -1194,7 +1196,7 @@ def acsincome_process(n_classes=2, sensitive_attr='sex', remove_sensitive_attr=T
     print(f"processing continues.")
 
     # Download or load the dataset
-    csv_path = 'data/acsincome/acs_income.csv'
+    csv_path = os.path.join(cache_dir, 'acs_income.csv')
     if os.path.exists(csv_path):
         print(f"Found existing file: {csv_path}. Loading from disk...")
         df = pd.read_csv(csv_path)

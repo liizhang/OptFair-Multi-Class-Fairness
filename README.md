@@ -57,11 +57,39 @@ PyTorch installation can depend on your CUDA version. If needed, install the mat
 
 The dataset loader is implemented in `optimalfair/utils/data_utils.py`. The current code supports:
 
-- **Adult**: included under `data/adult/`; supports `gender`, `race`, and `gender-race` sensitive attributes.
-- **CelebA**: expects CelebA files under `data/celeba/raw_data/`, including `list_attr_celeba.txt` and `img_align_celeba/`.
-- **ENEM**: expects the ENEM raw file configured in `enem_process`; processed data is cached under `data/enem/processed_data/`.
-- **ACSIncome**: loaded through Fairlearn/Folktables-style ACS processing and cached under `data/acsincome/`.
-- **COMPAS**: expects `data/compas/raw_data/compas-scores-two-years.csv`.
+- **Adult**
+  
+  - Download the following files:
+  
+  - https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
+    
+    https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test
+    
+    https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names
+  
+  - Place it in the folder: data/adult/raw_data
+
+- **ENEM**
+  
+  - Download from https://download.inep.gov.br/microdados/microdados_enem_2020.zip
+  
+  - unzip microdados_enem_2020.zip, place them in the folder: data/enem/raw_data
+
+- **ACSIncome**
+
+  - The ACSIncome dataset is downloaded automatically by the code
+
+- **CelebA**
+  
+  - Download files from https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+    
+    - img_align_celeba.7z
+    
+    - identity_CelebA.txt
+    
+    - list_attr_celeba.txt
+  
+  - unzip img_align_celeba.7z, place them in the folder: data/celeba/raw_data
 
 Set `--generate_data True` to regenerate processed files when the corresponding raw data is available.
 
@@ -129,12 +157,4 @@ Results are written to `log/<dataset>/<algorithm>/<fairness_metric>-<fairness_bo
 If you find this repository useful, please cite:
 
 ```bibtex
-@inproceedings{
-anonymous2026demystifying,
-title={Demystifying the Optimal Fair Classifier in Multi-Class Classification},
-author={Anonymous},
-booktitle={Forty-third International Conference on Machine Learning},
-year={2026},
-url={https://openreview.net/forum?id=70vztAT0Or}
-}
 ```

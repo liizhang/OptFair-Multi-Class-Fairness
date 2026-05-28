@@ -20,9 +20,20 @@ log/*
 !log/exp_config/
 !log/exp_config/*.yaml
 
-# Datasets: keep only the top-level data directory placeholder
+# Datasets: keep only dataset directory placeholders
 data/*
-!data/.gitkeep
+!data/adult/
+data/adult/*
+!data/adult/.gitkeep
+!data/enem/
+data/enem/*
+!data/enem/.gitkeep
+!data/acs/
+data/acs/*
+!data/acs/.gitkeep
+!data/celeba/
+data/celeba/*
+!data/celeba/.gitkeep
 
 # Cached or trained model checkpoints
 saved_model/
