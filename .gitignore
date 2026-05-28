@@ -1,0 +1,49 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Runtime logs: keep default experiment configs only
+log/*
+!log/exp_config/
+!log/exp_config/*.yaml
+
+# Datasets: keep only the top-level data directory placeholder
+data/*
+!data/.gitkeep
+
+# Cached or trained model checkpoints
+saved_model/
+*.pth
+*.pt
+*.ckpt
+
+# Large generated data/cache files
+*.mmap
+*.dat
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Local experiment outputs
+results/
+outputs/
+runs/
+
+# Package/build artifacts
+build/
+dist/
+*.egg-info/

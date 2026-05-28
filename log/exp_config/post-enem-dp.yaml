@@ -1,0 +1,9 @@
+model: 1nn
+lr: 0.001
+batch_size: 256
+
+dual_params_lr: 0.01
+dual_params_bound: 5
+tau: 0.05
+post_num_round: 50
+post_batch_size: 2048

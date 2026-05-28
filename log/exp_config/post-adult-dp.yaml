@@ -1,0 +1,8 @@
+model: logistic
+lr: 0.005
+
+dual_params_lr: 0.001
+dual_params_bound: 100
+tau: 0.02
+post_num_round: 30
+post_batch_size: 128
