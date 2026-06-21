@@ -157,4 +157,13 @@ Results are written to `log/<dataset>/<algorithm>/<fairness_metric>-<fairness_bo
 If you find this repository useful, please cite:
 
 ```bibtex
+@misc{zhang2026demystifyingoptimalfairclassifier,
+      title={Demystifying the Optimal Fair Classifier in Multi-Class Classification}, 
+      author={Li Zhang and Yuyuan Li and XiaoHua Feng and Jiaming Zhang and Fengyuan Yu and Chaochao Chen},
+      year={2026},
+      eprint={2606.00656},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2606.00656}, 
+}
 ```
